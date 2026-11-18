@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b2923">
+<title>Durga Lakshmi Vishnu Priya &amp; Gokul Krishna | SaranamsWedding — Royal Edition</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&family=Noto+Serif+Telugu:wght@400;500;600;700&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --pink:#d08ca2;
+  --light:#fff8f8;
+  --ink:#603f50;
+  --gold:#c9a66c;
+}
+* {box-sizing:border-box}
+html {scroll-behavior:smooth}
+body {
+  margin:0;
+  background:var(--light);
+  color:var(--ink);
+  font-family:"DM Sans",sans-serif;
+  overflow-x:hidden;
+}
+button,input,select {font:inherit}
+button,a {-webkit-tap-highlight-color:transparent}
+button {cursor:pointer}
+h1,h2,h3 {font-family:"Playfair Display",serif;font-weight:400}
+h1 {font-size:clamp(3rem,11vw,6rem);line-height:1.15}
+h2 {font-size:clamp(2.1rem,7vw,3.6rem)}
+h1 em,h2 em {
+  font-family:"Great Vibes",cursive;
+  color:#ae7187;
+  font-style:normal;
+}
+.eyebrow {
+  font-size:12px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  font-weight:600;
+}
+.telugu {font-family:"Noto Serif Telugu",serif;font-size:24px}
+.btn {
+  display:inline-block;
+  padding:14px 24px;
+  border:1px solid var(--pink);
+  border-radius:40px;
+  background:var(--pink);
+  color:white;
+  font-weight:600;
+  text-decoration:none;
+}
+.btn.secondary {background:transparent;color:var(--ink)}
+.btn:disabled {opacity:.55;cursor:wait}
+
+/* OPENING */
+.opening {
+  position:fixed;
+  inset:0;
+  z-index:50;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  background:linear-gradient(110deg,#dda7b9,#f0c4d0,#dba1b4);
+  isolation:isolate;
+}
+.opening::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:repeating-linear-gradient(
+    90deg,
+    #c88499 0,
+    #eebdca 12%,
+    #c9869d 24%,
+    #eab4c5 36%,
+    #b8788e 48%
+  );
+  opacity:.5;
+}
+.mandala {
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:120vmax;
+  height:120vmax;
+  transform:translate3d(-50%,-50%,0);
+  opacity:.42;
+  will-change:transform;
+  pointer-events:none;
+}
+.mandala svg {width:100%;height:100%}
+.opening-content {
+  position:relative;
+  z-index:2;
+  text-align:center;
+  width:100%;
+  padding:20px;
+  color:white;
+}
+.opening-content .eyebrow {margin:25px 0}
+.opening-content .btn {
+  background:white;
+  color:#91566d;
+  border-color:white;
+  margin-top:12px;
+}
+.opening.opened {
+  pointer-events:none;
+  animation:openingFade 2s linear forwards;
+}
+.opening.opened .mandala {
+  animation:mandalaSpin 2s linear forwards;
+}
+.opening.opened .opening-content {
+  animation:contentFade .35s ease forwards;
+}
+@keyframes mandalaSpin {
+  from {transform:translate3d(-50%,-50%,0) rotate(0deg) scale(1)}
+  to {transform:translate3d(-50%,-50%,0) rotate(360deg) scale(1.2)}
+}
+@keyframes openingFade {
+  0%,35% {opacity:1}
+  100% {opacity:0}
+}
+@keyframes contentFade {to {opacity:0}}
+
+/* INVITATION */
+.music {
+  position:fixed;
+  top:16px;
+  right:15px;
+  z-index:15;
+  border:1px solid #e7bac6;
+  border-radius:30px;
+  background:#fffaf7ed;
+  color:#92576c;
+  padding:10px 15px;
+}
+.hero {
+  min-height:100svh;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  padding:80px 24px;
+  background:radial-gradient(
+    ellipse at 50% 30%,
+    #fffaf7 0%,
+    #fae5eb 70%,
+    #f1cbd7 100%
+  );
+}
+.hero .subtitle {
+  max-width:390px;
+  margin:20px auto;
+  line-height:1.9;
+}
+.hashtag {color:#b67b91;font-weight:700}
+.flower {font-size:35px;color:#c58d9c;margin:25px}
+.section {padding:85px 22px;text-align:center}
+.section>p {max-width:600px;margin-left:auto;margin-right:auto;line-height:1.8}
+.story {background:#fffaf7}
+.wedding-date-section {background:#f9e9ed}
+.countdown {
+  display:flex;
+  gap:10px;
+  max-width:550px;
+  margin:35px auto;
+}
+.countdown div {
+  flex:1;
+  min-width:0;
+  border:1px solid #e8beca;
+  border-radius:14px;
+  background:#ffffffa8;
+  padding:18px 3px;
+}
+.countdown strong {
+  display:block;
+  font-family:"Playfair Display",serif;
+  font-size:clamp(23px,6vw,44px);
+  font-weight:400;
+}
+.countdown small {font-size:10px}
+.event-grid {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+  max-width:1000px;
+  margin:40px auto;
+}
+.event {
+  padding:30px 18px;
+  background:white;
+  border:1px solid #e9c8d2;
+  border-radius:20px;
+}
+.event.reception {background:#fff8f8}
+.event.haldi-event {background:linear-gradient(145deg,#fae8ec,#fffaf4)}
+.event.wedding-event {background:#fff}
+.event h3 {font-size:28px}
+.event-icon {font-size:40px}
+.event .where {line-height:1.7;min-height:60px}
+.event-actions {
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  justify-content:center;
+  margin-top:20px;
+}
+.blessing {background:#f7e1e7}
+.form {
+  display:grid;
+  gap:13px;
+  max-width:440px;
+  margin:30px auto;
+  text-align:left;
+}
+.form label {font-size:14px;font-weight:600}
+.form input,.form select {
+  width:100%;
+  padding:14px;
+  border:1px solid #e3bac6;
+  border-radius:12px;
+  background:white;
+}
+.note {font-size:13px;color:#8b6d7a;line-height:1.7}
+footer {
+  text-align:center;
+  background:#eed4dd;
+  padding:45px 20px;
+}
+footer .names {
+  font-family:"Great Vibes",cursive;
+  font-size:44px;
+}
+.petal-layer {
+  position:fixed;
+  inset:0;
+  z-index:9;
+  pointer-events:none;
+  overflow:hidden;
+}
+.petal {
+  position:absolute;
+  top:-30px;
+  color:#d69bac;
+  animation:fall linear forwards;
+}
+@keyframes fall {
+  to {transform:translate3d(var(--drift),110vh,0) rotate(540deg);opacity:0}
+}
+
+@media(max-width:760px) {
+  .event-grid {grid-template-columns:1fr;max-width:440px}
+  .section {padding:70px 20px}
+  .event .where {min-height:0}
+}
+@media(prefers-reduced-motion:reduce) {
+  html {scroll-behavior:auto}
+}
+
+/* GRAND ROYAL REDESIGN — actual structural changes, no backend changes */
+:root{--pink:#a95070;--light:#fff8f3;--ink:#61364a;--gold:#b78b4c}
+body{background:#fff9f3}
+.opening{background:radial-gradient(ellipse at 50% 35%,#fbe9e4 0%,#edbfca 53%,#b96e8b 100%);}
+.opening::before{background:linear-gradient(90deg,rgba(93,33,57,.17),transparent 20%,rgba(255,249,226,.24) 50%,transparent 80%,rgba(93,33,57,.17));opacity:1}
+.opening::after{content:"";position:absolute;inset:0;background:url('royal-arch.svg') center/100% 100% no-repeat;z-index:1;pointer-events:none;filter:drop-shadow(0 2px 3px #925a6b44)}
+.mandala{width:min(105vmin,720px);height:min(105vmin,720px);opacity:.18;z-index:1;top:48%}
+.opening-content{z-index:3;width:min(100%,560px);padding:clamp(45px,8vh,75px) 50px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100svh;gap:clamp(9px,2vh,17px);color:#793d52;text-shadow:0 1px 12px #fff7e7a8}
+.opening-content .telugu{font-family:'Noto Serif Telugu',serif;color:#7f3c51;font-size:clamp(20px,5vw,29px);margin:0}
+.opening-content .eyebrow{color:#7d4857;margin:0;letter-spacing:.3em;font-size:11px}
+.opening-content>p:not(.telugu):not(.eyebrow){font-family:'Playfair Display',serif;font-style:italic;color:#7a4256;font-size:clamp(16px,4vw,20px);margin:0}
+.opening-content .btn{background:linear-gradient(120deg,#84354f,#a44c68,#743047);color:#fff9ef;border:1px solid #e5c58d;box-shadow:0 8px 22px #70374a50;padding:15px 30px;margin-top:8px;letter-spacing:.03em}
+.opening-content .btn:focus-visible{outline:2px solid #f4db9b;outline-offset:4px}
+.opening.opened{animation:openingFade 2s ease-out forwards}
+.opening.opened .mandala{animation:mandalaSpin 2s linear forwards}
+.hero{position:relative;isolation:isolate;overflow:hidden;min-height:100svh;background:radial-gradient(ellipse at 50% 30%,#fffaf1 0%,#fae6e4 64%,#e7b4c3 100%);padding:95px 55px}
+.hero::before{content:"";position:absolute;inset:0;background:url('royal-arch.svg') center/100% 100% no-repeat;pointer-events:none;z-index:-1}
+.hero::after{content:"✦  ❀  ✦";position:absolute;bottom:8%;left:0;right:0;text-align:center;color:#ba8e53;font-size:18px;letter-spacing:10px;pointer-events:none}
+.hero>div{max-width:600px;padding:32px 4px;background:radial-gradient(ellipse,rgba(255,251,242,.82),rgba(255,251,242,0) 75%)}
+.hero .telugu{color:#96546b;font-size:clamp(22px,5vw,30px)}
+.hero .eyebrow{color:#91657a;font-size:10px;letter-spacing:.23em}
+.hero h1{font-size:clamp(3.1rem,11vw,6.5rem);line-height:1.1;margin:26px auto 14px;color:#7e344d;text-shadow:0 3px 0 #fff8e9}
+.hero h1 em{color:#b58a4d;font-size:1.12em}
+.hero .flower{color:#b98b52;font-size:25px;margin:13px}
+.hero .subtitle{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(15px,3.6vw,20px);line-height:1.8;max-width:360px}
+.hero .hashtag{color:#8e4962;letter-spacing:.04em}
+.hero a[href="#story"]{display:inline-block;color:#7e425a;text-decoration:none;border-bottom:1px solid #bb9967;padding-bottom:7px;font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+.section{position:relative}
+.section h2{color:#7d3c52}
+.story{background:linear-gradient(180deg,#fffaf4,#fff2ed)}
+.wedding-date-section{background:linear-gradient(145deg,#f8e2e6,#f9efea)}
+.countdown div{border:1px solid #c9a675;background:#fffaf4;box-shadow:0 8px 20px #7a455015}
+.moments{background:linear-gradient(160deg,#fff8f8,#f6dce4 60%,#fff8f8);overflow:hidden}
+.moments .moments-lead{max-width:510px;margin:0 auto 25px;line-height:1.8}
+.single-couple-moment{width:min(82vw,560px);margin:25px auto 12px;padding:10px 10px 18px;border:1px solid #e5c7b7;border-radius:22px;background:#fff9f5;box-shadow:0 18px 50px #73455730;text-align:center}
+.single-couple-moment img{display:block;width:100%;max-height:70vh;object-fit:contain;border-radius:15px}
+.single-couple-moment figcaption{font-family:'Playfair Display',Georgia,serif;color:#84576b;font-size:clamp(16px,2.3vw,20px);margin-top:14px}
+.event-grid{gap:24px}
+.event{border:1px solid #c7a473;border-radius:110px 110px 18px 18px;padding:44px 20px 30px;box-shadow:0 16px 35px #6d3a4d17;background:linear-gradient(#fffaf4,#fff5f2);position:relative;overflow:hidden}
+.event::before{content:"✦";position:absolute;top:17px;left:0;right:0;text-align:center;color:#bb985e}
+.event.reception{background:linear-gradient(#fae8ec,#fffaf4)}
+.event h3{color:#8c455d}
+.blessing{background:linear-gradient(#f7dce3,#f3d1dc)}
+.form{padding:24px;border:1px solid #d8b68a;border-radius:24px;background:#fffaf7;box-shadow:0 12px 35px #7b485017}
+.form input,.form select{background:#fff;border-color:#ddc2ad}
+footer{background:#eac4cf;border-top:2px solid #d2af7d}
+@media(max-width:480px){.opening-content{padding-left:45px;padding-right:45px}.hero{padding:70px 48px}.hero h1{font-size:clamp(2.8rem,11vw,4.2rem)}.hero .subtitle{font-size:15px}}
+@media(prefers-reduced-motion:reduce){.opening.opened .mandala{animation:none}.opening.opened{animation-duration:.1s}}
+
+/* Responsive layout correction: preserve mobile design, constrain decorative art on wide screens. */
+html,body{width:100%;max-width:100%;overflow-x:clip}
+img,svg,video{max-width:100%;height:auto}
+.opening,.hero{width:100%;min-height:100svh}
+.opening::after,.hero::before{background-size:100% 100%;}
+.opening-content{max-width:560px;margin-inline:auto;position:relative}
+.event-grid{width:min(100%,1100px);margin-inline:auto}
+.event{min-width:0}
+@media (min-width: 761px){
+  .opening::after,.hero::before{
+    inset:0 auto;left:50%;width:min(100%,850px);
+    transform:translateX(-50%);
+    background-position:center center;
+    background-size:100% 100%;
+  }
+  .opening-content{width:min(82vw,530px);padding:clamp(24px,4vh,55px) 38px;gap:clamp(8px,1.4vh,15px)}
+  .mandala{width:min(78vh,680px);height:min(78vh,680px)}
+  .hero{padding:clamp(65px,8vh,105px) 24px;}
+  .hero>div{width:min(100%,560px);padding:30px 30px}
+  .hero h1{font-size:clamp(3.4rem,6vw,6rem)}
+  .hero .subtitle{max-width:490px}
+  .event-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+  .event{padding:46px 18px 28px}
+}
+@media (min-width: 761px) and (max-height: 680px){
+  .opening-content{gap:6px;padding-block:14px}
+  .opening-content .telugu{font-size:20px}
+  .opening-content .btn{padding:11px 23px}
+  .hero{padding-block:40px}
+  .hero h1{font-size:clamp(2.8rem,5vw,4.3rem);margin:10px auto}
+}
+@media (min-width: 1200px){
+  .opening::after,.hero::before{width:min(76vw,900px)}
+  .opening{background:radial-gradient(ellipse at center,#f8dce1 0%,#e9b6c5 48%,#a95b79 100%)}
+  .hero{background:radial-gradient(ellipse at center,#fffaf3 0%,#f8e7e6 58%,#e3afc1 100%)}
+}
+@media (max-width: 760px){
+  .opening::after,.hero::before{background-position:center;background-size:100% 100%}
+  .opening-content{width:100%;padding-inline:clamp(22px,8vw,50px)}
+  .hero{padding-inline:clamp(22px,7vw,48px)}
+  .hero>div{width:100%;max-width:520px}
+  .event-grid{grid-template-columns:1fr;max-width:430px}
+}
+@media (prefers-reduced-motion:reduce){.opening.opened,.opening.opened .mandala{animation-duration:.15s!important}}
+
+
+/* Clean gold monogram: no image-card shadow or pasted-on appearance */
+/* Bidirectional 3D Card Rise; only activates if JavaScript starts */
+.js-scroll .rise-3d {opacity:0;transform:perspective(1100px) translateY(46px) rotateX(9deg) scale(.975);filter:blur(3px);transition:opacity .85s ease-out,transform .85s cubic-bezier(.2,.75,.25,1),filter .85s ease-out;will-change:transform,opacity}
+.js-scroll .rise-3d.is-visible {opacity:1;transform:perspective(1100px) translateY(0) rotateX(0) scale(1);filter:blur(0)}
+@media (prefers-reduced-motion:reduce){.js-scroll .rise-3d,.js-scroll .rise-3d.is-visible {opacity:1;transform:none;filter:none;transition:none}}
+.event-actions .directions-pending{opacity:.65;cursor:not-allowed}
+
+
+/* Event cards: symmetrical, centered on desktop and mobile. */
+.events .event-grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  width:min(100%,760px);
+  max-width:760px;
+  gap:24px;
+  margin:40px auto 0;
+  align-items:stretch;
+  justify-content:center;
+}
+.events .event {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  min-width:0;
+  width:100%;
+  height:100%;
+  padding:44px 22px 30px;
+}
+.events .event h3 {min-height:2.5em;display:flex;align-items:center;justify-content:center;margin:16px 0;}
+.events .event .where {min-height:3.4em;margin:12px 0;display:flex;align-items:center;justify-content:center;}
+.events .event-actions {margin-top:auto;padding-top:22px;display:flex;flex-direction:column;align-items:center;gap:10px;width:100%;}
+.events .event-actions .btn {display:inline-flex;align-items:center;justify-content:center;min-height:48px;max-width:100%;width:min(100%,250px);text-align:center;white-space:normal;}
+@media(max-width:760px) {
+  .events .event-grid {grid-template-columns:minmax(0,1fr);width:min(100%,430px);gap:24px;}
+  .events .event {padding:44px 20px 30px;}
+  .events .event h3 {min-height:0;}
+  .events .event .where {min-height:0;}
+  .events .event-actions {padding-top:16px;}
+}
+</style>
+<style>
+/* Requested refinement: no decorative arch; preserve the original mandala. */
+.opening::after, .hero::before { content:none !important; display:none !important; background:none !important; }
+.hero .couple-names { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.04em; line-height:1.12; }
+.hero .couple-names > span { display:block; }
+.hero .couple-names > em { display:block; margin:.05em 0; font-size:.7em; line-height:1; }
+</style><style id="creator-footer-only">
+footer .creator-credit{margin:15px auto 0;max-width:520px;color:#70485a}
+footer .creator-made{font:clamp(12px,3vw,15px) 'DM Sans',Arial,sans-serif!important;letter-spacing:0!important;margin:14px 0 8px!important;color:#70485a}
+footer .creator-made strong{font-weight:700}
+footer .creator-subline{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;color:#70485a}
+footer .creator-subline em{font:italic clamp(12px,3vw,16px) 'Playfair Display',Georgia,serif}
+footer .creator-divider{height:22px;width:1px;background:#a57e8c}
+footer .creator-mail{display:inline-grid;place-items:center;border:0;background:transparent;color:#70485a;padding:6px;width:37px;height:37px;cursor:pointer;transition:transform .35s ease}
+footer .creator-mail[aria-expanded="true"]{transform:translateY(-3px) rotate(-12deg)}
+footer .creator-email-panel{max-height:0;opacity:0;overflow:hidden;transform:translateY(-8px);transition:max-height .45s ease,opacity .45s ease,transform .45s ease}
+footer .creator-email-panel.visible{max-height:70px;opacity:1;transform:translateY(0)}
+footer .creator-email-panel a{display:inline-block;padding:12px 0 3px;color:#70485a!important;text-decoration:underline;text-underline-offset:4px;font:clamp(12px,3vw,14px) 'DM Sans',Arial,sans-serif;letter-spacing:0!important;overflow-wrap:anywhere}
+</style>
+<style id="personalized-content-style">
+.hero .couple-names{font-size:clamp(.9rem,4.8vw,2.4rem);white-space:nowrap}
+.family-names{font-family:'Playfair Display',Georgia,serif;font-size:clamp(18px,4vw,23px);color:#84576b}
+</style>
+<style id="event-alignment-fix-20261104">
+/* 2026-11-04: two-card centered layout, with identical card and action alignment */
+#events .event-grid {
+  display:grid !important;
+  grid-template-columns:repeat(2,minmax(0,340px)) !important;
+  justify-content:center !important;
+  align-items:stretch !important;
+  gap:24px !important;
+  width:min(100%,760px) !important;
+  max-width:760px !important;
+  margin:40px auto !important;
+}
+#events .event {
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  text-align:center !important;
+  min-width:0 !important;
+  width:100% !important;
+  height:100% !important;
+  padding:46px 20px 30px !important;
+}
+#events .event .where {min-height:3.5em !important; margin-bottom:0 !important;}
+#events .event-actions {
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:flex-end !important;
+  gap:10px !important;
+  width:100% !important;
+  margin-top:auto !important;
+  padding-top:22px !important;
+}
+#events .event-actions .btn {
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  text-align:center !important;
+  width:min(100%,230px) !important;
+  min-height:48px !important;
+  padding:12px 14px !important;
+  white-space:normal !important;
+}
+@media(max-width:760px) {
+  #events .event-grid {grid-template-columns:minmax(0,1fr) !important;max-width:430px !important;gap:24px !important;}
+  #events .event {padding:46px 20px 30px !important;}
+  #events .event .where {min-height:0 !important;}
+  #events .event-actions {margin-top:18px !important;padding-top:0 !important;}
+}
+</style>
+<style id="royal-theme">
+:root {
+  --royal-night:#09231f;
+  --royal-green:#123b32;
+  --royal-gold:#c7a86a;
+  --royal-gold-light:#f0d99f;
+  --royal-ivory:#f7f0df;
+  --royal-ink:#19392f;
+}
+html {background:var(--royal-night)}
+body.royal-theme {
+  background:var(--royal-night);
+  color:var(--royal-ivory);
+}
+.royal-theme h1,
+.royal-theme h2,
+.royal-theme h3 {
+  font-family:"Cinzel","Playfair Display",serif;
+  letter-spacing:.035em;
+}
+.royal-theme h1 em,
+.royal-theme h2 em {
+  font-family:"Great Vibes",cursive;
+  color:var(--royal-gold-light);
+  letter-spacing:0;
+}
+.royal-theme .opening {
+  background:radial-gradient(ellipse at 50% 35%,#285d4d 0%,var(--royal-green) 48%,#061713 100%);
+}
+.royal-theme .opening::before {
+  background:
+    linear-gradient(90deg,transparent 9%,#d1b5730d 50%,transparent 91%),
+    repeating-linear-gradient(90deg,transparent 0 11%,#f0d99f08 11.1% 11.25%);
+  opacity:1;
+}
+.royal-theme .mandala {
+  opacity:.26;
+}
+.royal-theme .mandala svg {
+  stroke:var(--royal-gold-light);
+}
+.royal-theme .opening-content {
+  color:var(--royal-ivory);
+  text-shadow:0 2px 18px #0008;
+}
+.royal-theme .opening-content::before {
+  content:"";
+  position:absolute;
+  inset:28px 20px;
+  z-index:-1;
+  border:1px solid #d5bb7c99;
+  border-radius:240px 240px 24px 24px;
+  box-shadow:inset 0 0 0 8px #d5bb7c12,0 0 45px #0005;
+  pointer-events:none;
+}
+.royal-theme .opening-content .telugu,
+.royal-theme .opening-content .eyebrow {
+  color:var(--royal-gold-light);
+}
+.royal-theme .opening-content>p:not(.telugu):not(.eyebrow) {
+  color:var(--royal-ivory);
+}
+.royal-theme .opening-content .btn {
+  color:var(--royal-night);
+  background:linear-gradient(135deg,#f3dfa9,#c4a15b);
+  border:1px solid #f6e5bb;
+  box-shadow:0 10px 28px #0006;
+}
+.royal-theme .music {
+  border-color:var(--royal-gold);
+  background:#0b2923ed;
+  color:var(--royal-gold-light);
+  box-shadow:0 5px 18px #0004;
+}
+.royal-theme .hero {
+  background:radial-gradient(ellipse at 50% 25%,#205243 0%,#123b32 43%,#09231f 100%);
+}
+.royal-theme .hero::after {
+  color:var(--royal-gold-light);
+}
+.royal-theme .hero>div {
+  background:radial-gradient(ellipse,#0b2923a8,#0b292300 75%);
+}
+.royal-theme .hero h1 {
+  color:var(--royal-ivory);
+  text-shadow:0 3px 24px #0008;
+}
+.royal-theme .hero h1 em,
+.royal-theme .hero .telugu,
+.royal-theme .hero .eyebrow {
+  color:var(--royal-gold-light);
+}
+.royal-theme .hero .subtitle {
+  color:var(--royal-ivory);
+}
+.royal-theme .hero .hashtag {
+  color:var(--royal-gold-light);
+}
+.royal-theme .hero a[href="#story"] {
+  color:var(--royal-gold-light);
+  border-color:var(--royal-gold);
+}
+.royal-theme .flower {
+  color:var(--royal-gold);
+}
+.royal-theme .story {
+  color:var(--royal-ink);
+  background:linear-gradient(145deg,#fbf6e9,#efe4ca);
+}
+.royal-theme .story h2,
+.royal-theme .story .family-names {
+  color:#254c3d;
+}
+.royal-theme .story .eyebrow {
+  color:#967744;
+}
+.royal-theme .wedding-date-section {
+  color:var(--royal-ivory);
+  background:linear-gradient(145deg,#164739,#09231f);
+  border-top:1px solid #c7a86a88;
+  border-bottom:1px solid #c7a86a88;
+}
+.royal-theme .wedding-date-section h2,
+.royal-theme .wedding-date-section .eyebrow,
+.royal-theme .wedding-date-section .telugu {
+  color:var(--royal-gold-light);
+}
+.royal-theme .countdown div {
+  color:var(--royal-ink);
+  border-color:var(--royal-gold);
+  background:linear-gradient(145deg,#fff9e9,#e9dfc8);
+  box-shadow:0 10px 25px #0003;
+}
+.royal-theme .moments {
+  color:var(--royal-ink);
+  background:linear-gradient(160deg,#f8f2e4,#e8eadf 58%,#f8f2e4);
+}
+.royal-theme .moments h2 {
+  color:#254c3d;
+}
+.royal-theme .moments .eyebrow {
+  color:#967744;
+}
+.royal-theme .single-couple-moment {
+  border:1px solid var(--royal-gold);
+  background:#fffaf0;
+  box-shadow:0 18px 48px #102d2540,0 0 0 5px #c7a86a22;
+}
+.royal-theme .events {
+  color:var(--royal-ivory);
+  background:linear-gradient(160deg,#0b2923,#133e33);
+}
+.royal-theme .events h2,
+.royal-theme .events>.eyebrow {
+  color:var(--royal-gold-light);
+}
+.royal-theme .event {
+  border-color:var(--royal-gold);
+  box-shadow:0 18px 42px #04140f66;
+}
+.royal-theme .event.haldi-event {
+  color:var(--royal-ink);
+  background:linear-gradient(145deg,#e7ece4,#f8f4e9);
+}
+.royal-theme .event.wedding-event {
+  color:var(--royal-ink);
+  background:linear-gradient(145deg,#fffaf0,#f1e7d2);
+}
+.royal-theme .event h3,
+.royal-theme .event .telugu {
+  color:#315744;
+}
+.royal-theme .event .eyebrow {
+  color:#947542;
+}
+.royal-theme .event .btn {
+  color:var(--royal-night);
+  border-color:#b89552;
+  background:linear-gradient(135deg,#f3dfa9,#c4a15b);
+}
+.royal-theme .event .btn.secondary {
+  color:#254c3d;
+  background:#fffaf0;
+}
+.royal-theme .event::before {
+  color:#a98746;
+}
+.royal-theme .blessing {
+  color:var(--royal-ink);
+  background:linear-gradient(145deg,#f0e2bd,#faf5e8);
+}
+.royal-theme .blessing h2,
+.royal-theme .blessing .telugu {
+  color:#315744;
+}
+.royal-theme footer {
+  color:var(--royal-ivory);
+  background:linear-gradient(145deg,#09231f,#061713);
+  border-top:2px solid var(--royal-gold);
+}
+.royal-theme footer .names {
+  color:var(--royal-gold-light);
+}
+.royal-theme footer .creator-credit,
+.royal-theme footer .creator-made,
+.royal-theme footer .creator-subline,
+.royal-theme footer .creator-email-panel a {
+  color:#e7dbc1 !important;
+}
+.royal-theme footer .creator-divider {
+  background:var(--royal-gold);
+}
+.royal-theme .petal {
+  color:var(--royal-gold-light);
+}
+@media(max-width:600px) {
+  .royal-theme .opening-content::before {
+    inset:24px 12px;
+  }
+}
+</style>
+</head>
+
+<body class="royal-theme">
+
+<div class="opening" id="opening">
+  <div class="mandala" aria-hidden="true">
+    <svg viewBox="0 0 400 400" fill="none" stroke="#b58c4e" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="200" cy="200" r="180" stroke-width="2"/>
+      <circle cx="200" cy="200" r="165"/>
+      <circle cx="200" cy="200" r="120"/>
+      <g id="petalShape">
+        <ellipse cx="200" cy="105" rx="42" ry="95" stroke-width="2"/>
+      </g>
+      <use href="#petalShape" transform="rotate(30 200 200)"/>
+      <use href="#petalShape" transform="rotate(60 200 200)"/>
+      <use href="#petalShape" transform="rotate(90 200 200)"/>
+      <use href="#petalShape" transform="rotate(120 200 200)"/>
+      <use href="#petalShape" transform="rotate(150 200 200)"/>
+      <use href="#petalShape" transform="rotate(180 200 200)"/>
+      <use href="#petalShape" transform="rotate(210 200 200)"/>
+      <use href="#petalShape" transform="rotate(240 200 200)"/>
+      <use href="#petalShape" transform="rotate(270 200 200)"/>
+      <use href="#petalShape" transform="rotate(300 200 200)"/>
+      <use href="#petalShape" transform="rotate(330 200 200)"/>
+    </svg>
+  </div>
+
+  <div class="opening-content">
+    <p class="telugu" lang="te">శుభ వివాహం</p>
+    <p class="eyebrow">You're Invited</p>
+    <p>Durga Lakshmi Vishnu Priya</p>
+    <p>A beautiful beginning awaits</p>
+    <button class="btn" id="openBtn">Open invitation ↗</button>
+  </div>
+</div>
+
+<div id="invitation">
+  <button class="music" id="musicBtn" type="button">♫ Music off</button>
+  <audio id="bgMusic" src="Meghaallo.mp3" loop preload="none"></audio>
+  <div class="petal-layer" id="petals"></div>
+
+  <main>
+    <section class="hero" id="home">
+      <div>
+        <p class="telugu" lang="te">శరణం వారి వివాహ ఆహ్వానం</p>
+        <p class="eyebrow">Together with our families</p>
+        <h1 class="couple-names"><span class="bride-name">Durga Lakshmi Vishnu Priya</span><em>&amp;</em><span class="groom-name">Gokul Krishna</span></h1>
+        <div class="flower">❀</div>
+        <p class="subtitle">
+          With joy in our hearts, we invite you to celebrate
+          this beautiful new beginning with our family.
+        </p>
+        <p class="eyebrow">Friday · 19 February 2027</p>
+        <p class="hashtag">#SaranamsWedding</p>
+        <p><a href="#story">Discover our celebrations ↓</a></p>
+      </div>
+    </section>
+
+    <section class="section story" id="story">
+      <p class="eyebrow">With the blessings of our parents</p>
+      <h2>A joyful <em>celebration</em></h2>
+      <p class="family-names">Srinivasa Rao &amp; Dhanalakshmi</p>
+      <p>Parents of the bride</p>
+      <p>With love from her brother, Vamsi Krishna</p>
+      <p lang="te">మీ రాకతో మా వేడుక మరింత ఆనందంగా మారుతుంది.</p>
+      <div class="flower">✿ ❀ ✿</div>
+    </section>
+
+    <section class="section wedding-date-section">
+      <p class="eyebrow">Counting every moment</p>
+      <h2>Until our <em>Muhurtham</em></h2>
+      <div class="countdown">
+        <div><strong id="days">--</strong><small>DAYS</small></div>
+        <div><strong id="hours">--</strong><small>HOURS</small></div>
+        <div><strong id="minutes">--</strong><small>MINUTES</small></div>
+        <div><strong id="seconds">--</strong><small>SECONDS</small></div>
+      </div>
+      <p id="countdownMsg">19 February 2027 · 5:45 AM IST</p>
+      <p class="telugu" lang="te">ఫిబ్రవరి 19, 2027 · ఉదయం 5:45</p>
+    </section>
+
+    <section class="section moments" id="moments" aria-label="Wedding photograph">
+      <p class="eyebrow">A lifetime of love</p>
+      <h2>Our <em>Cherished Moments</em></h2>
+      <p class="moments-lead">The people, the smiles, and the memories that make our story beautiful.</p>
+      <figure class="single-couple-moment">
+        <img src="1F6A0402.JPG" alt="Wedding photograph" loading="lazy" decoding="async">
+        <figcaption>A cherished moment</figcaption>
+      </figure>
+    </section>
+
+    <section class="section events" id="events">
+      <p class="eyebrow">Save the dates</p>
+      <h2>Our wedding <em>celebrations</em></h2>
+
+      <div class="event-grid">
+        <article class="event haldi-event">
+          <div class="event-icon">🌼</div>
+          <p class="telugu" lang="te">పసుపు వేడుక</p>
+          <p class="eyebrow">Wednesday · 17 February 2027</p>
+          <h3>Haldi</h3>
+          <p><strong>8:00 AM IST</strong></p>
+          <p class="where">At our home, Ramanuja Nilayam</p>
+          <div class="event-actions">
+            <a
+              class="btn secondary"
+              href="https://maps.app.goo.gl/2GjUHCtZqRpipWUr8"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Get directions ↗</a>
+          </div>
+        </article>
+
+        <article class="event wedding-event">
+          <div class="event-icon">💍</div>
+          <p class="telugu" lang="te">వివాహ వేడుక</p>
+          <p class="eyebrow">Friday · 19 February 2027</p>
+          <h3>Wedding Muhurtham</h3>
+          <p><strong>5:45 AM IST</strong></p>
+          <p class="where">Ranga Mandapam<br>Sampathnagar, opposite Hariharasutha Ayappa Swami Temple</p>
+          <div class="event-actions">
+            <a class="btn secondary" href="https://maps.app.goo.gl/YC7nVeoDZCNFnGwm9?g_st=aw" target="_blank" rel="noopener noreferrer">Get directions ↗</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section blessing">
+      <p class="telugu" lang="te">కల్యాణం కమనీయం</p>
+      <h2>With love, <em>and blessings</em></h2>
+      <p>Your presence is the most beautiful gift.</p>
+      <p lang="te">మీ ఆశీస్సులు మాకు ఎంతో విలువైనవి.</p>
+      <div class="flower">❀</div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="names">Vishnu Priya &amp; Gokul Krishna</div>
+    <p>19 · 02 · 2027</p>
+    <p>#SaranamsWedding</p>
+    <div class="creator-credit">
+      <p class="creator-made">Thoughtfully Crafted by <strong>Vamsi Krishna</strong></p>
+      <div class="creator-subline">
+        <em>Wedding Websites &amp; Beyond</em>
+        <span class="creator-divider" aria-hidden="true"></span>
+        <button type="button" id="creatorMail" class="creator-mail" aria-label="Reveal creator email" aria-expanded="false">
+          <svg viewBox="0 0 28 28" width="23" height="23" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h22v14H3z"/><path d="m3 8 11 9 11-9"/></svg>
+        </button>
+      </div>
+      <div id="creatorEmailPanel" class="creator-email-panel" aria-hidden="true">
+        <a href="mailto:vamsi.saranam192@gmail.com?subject=Wedding%20Website%20Enquiry">vamsi.saranam192@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script>
+"use strict";
+
+/* OPENING */
+const opening = document.getElementById('opening');
+const music = document.getElementById('bgMusic');
+const musicBtn = document.getElementById('musicBtn');
+music.volume = .45;
+
+function updateMusic() {
+  musicBtn.textContent = music.paused ? '♫ Music off' : '♫ Music on';
+}
+
+let petalsStarted = false;
+
+function makePetal() {
+  const p = document.createElement('span');
+  p.className = 'petal';
+  p.textContent = Math.random() > .5 ? '❀' : '✿';
+  p.style.left = Math.random() * 100 + 'vw';
+  p.style.fontSize = 12 + Math.random() * 17 + 'px';
+  p.style.setProperty('--drift', Math.random() * 220 - 110 + 'px');
+  p.style.animationDuration = 5 + Math.random() * 5 + 's';
+  document.getElementById('petals').appendChild(p);
+  setTimeout(() => p.remove(), 11000);
+}
+
+function startPetals() {
+  if (petalsStarted) return;
+  petalsStarted = true;
+  for (let i = 0; i <12; i++) setTimeout(makePetal, i * 170);
+  setInterval(makePetal, 800);
+}
+
+document.getElementById('openBtn').addEventListener('click', function () {
+  this.disabled = true;
+  opening.classList.add('opened');
+  startPetals();
+  music.play().then(updateMusic).catch(updateMusic);
+  setTimeout(() => opening.remove(), 2050);
+});
+
+musicBtn.addEventListener('click', () => {
+  if (music.paused) {
+    music.play().then(updateMusic).catch(() => {
+      alert('Please check that Meghaallo.mp3 is uploaded.');
+    });
+  } else {
+    music.pause();
+    updateMusic();
+  }
+});
+
+music.addEventListener('play', updateMusic);
+music.addEventListener('pause', updateMusic);
+
+/* COUNTDOWN */
+const wedding = new Date('2027-02-19T05:45:00+05:30').getTime();
+
+function updateCountdown() {
+  let diff = Math.max(0, wedding - Date.now());
+  const days = Math.floor(diff / 86400000);
+  diff %= 86400000;
+  const hours = Math.floor(diff / 3600000);
+  diff %= 3600000;
+  const minutes = Math.floor(diff / 60000);
+  const seconds = Math.floor(diff % 60000 / 1000);
+
+  for (const [id,value] of [
+    ['days',days],
+    ['hours',hours],
+    ['minutes',minutes],
+    ['seconds',seconds]
+  ]) {
+    document.getElementById(id).textContent =
+      String(value).padStart(2,'0');
+  }
+
+  if (Date.now() >= wedding) {
+    document.getElementById('countdownMsg').textContent =
+      'The celebrations have begun! ♡';
+  }
+}
+updateCountdown();
+setInterval(updateCountdown,1000);
+
+</script>
+<script>
+
+/* 3D Card Rise, replaying in both scroll directions. */
+(function(){
+  if(!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  const targets=document.querySelectorAll('#invitation .hero > div > *, #invitation .story > *, #invitation .wedding-date-section > *, #invitation .moments > *, #invitation .events > :not(.event-grid), #invitation .event, #invitation .blessing > *');
+  targets.forEach(el=>el.classList.add('rise-3d'));
+  document.documentElement.classList.add('js-scroll');
+  const io=new IntersectionObserver(entries=>{
+    for(const e of entries){
+      if(e.isIntersecting){e.target.classList.add('is-visible')}
+      else {e.target.classList.remove('is-visible')}
+    }
+  },{rootMargin:'0px 0px -7% 0px',threshold:0.08});
+  targets.forEach(el=>io.observe(el));
+})();
+
+
+</script>
+<script id="creator-footer-script">
+(function(){
+  const button=document.getElementById('creatorMail');
+  const panel=document.getElementById('creatorEmailPanel');
+  if(!button||!panel)return;
+  button.addEventListener('click',function(){
+    const expanded=button.getAttribute('aria-expanded')==='true';
+    button.setAttribute('aria-expanded',String(!expanded));
+    panel.setAttribute('aria-hidden',String(expanded));
+    panel.classList.toggle('visible',!expanded);
+  });
+})();
+</script>
+</body>
+</html>
